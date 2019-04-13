@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\1.UI\Met.Core.Admin\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Base\OptionRepository\**" />
+    <Compile Remove="Extend\**" />
+    <Compile Remove="MkChain\**" />
+    <Compile Remove="MkSys\**" />
+    <EmbeddedResource Remove="Base\OptionRepository\**" />
+    <EmbeddedResource Remove="Extend\**" />
+    <EmbeddedResource Remove="MkChain\**" />
+    <EmbeddedResource Remove="MkSys\**" />
+    <None Remove="Base\OptionRepository\**" />
+    <None Remove="Extend\**" />
+    <None Remove="MkChain\**" />
+    <None Remove="MkSys\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Base\ModulesRepository.cs" />
+    <Compile Remove="Base\PermissionRolesRepository.cs" />
+    <Compile Remove="Base\PermissionsRepository.cs" />
+    <Compile Remove="Base\RolesRepository.cs" />
+    <Compile Remove="Base\RoleUsersRepository.cs" />
+    <Compile Remove="Base\UserGroupRolesRepository.cs" />
+    <Compile Remove="Base\UserGroupsRepository.cs" />
+    <Compile Remove="Base\UserGroupUsersRepository.cs" />
+    <Compile Remove="Base\UsersRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\2.Application\Met.Core.IServices\Mk.Chain.Core.IServices.csproj" />
+    <ProjectReference Include="..\..\4.Entity\Met.Core.Models\Mk.Chain.Core.Models.csproj" />
+    <ProjectReference Include="..\..\5.Infrastructure\Met.Core.Util\Mk.Chain.Core.Util.csproj" />
+    <ProjectReference Include="..\Met.Core.IRepository\Mk.Chain.Core.IRepository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Base\" />
+  </ItemGroup>
+
+</Project>

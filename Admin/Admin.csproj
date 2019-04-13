@@ -1,0 +1,156 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\css\bootstrap-theme.min.css" />
+    <Content Remove="wwwroot\assets\css\bootstrap.css" />
+    <Content Remove="wwwroot\assets\css\custom-styles.css" />
+    <Content Remove="wwwroot\assets\css\font-awesome.css" />
+    <Content Remove="wwwroot\assets\font-awesome\fonts\fontawesome-webfontba72.eot" />
+    <Content Remove="wwwroot\assets\font-awesome\fonts\fontawesome-webfontba72.svg" />
+    <Content Remove="wwwroot\assets\font-awesome\fonts\fontawesome-webfontba72.ttf" />
+    <Content Remove="wwwroot\assets\font-awesome\fonts\fontawesome-webfontba72.woff" />
+    <Content Remove="wwwroot\assets\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Remove="wwwroot\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Remove="wwwroot\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Remove="wwwroot\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Remove="wwwroot\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Remove="wwwroot\assets\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Remove="wwwroot\assets\img\bg-img.jpg" />
+    <Content Remove="wwwroot\assets\js\bootstrap.min.js" />
+    <Content Remove="wwwroot\assets\js\chart-data.js" />
+    <Content Remove="wwwroot\assets\js\chart.min.js" />
+    <Content Remove="wwwroot\assets\js\custom-scripts.js" />
+    <Content Remove="wwwroot\assets\js\custom.js" />
+    <Content Remove="wwwroot\assets\js\dataTables\dataTables.bootstrap.css" />
+    <Content Remove="wwwroot\assets\js\dataTables\dataTables.bootstrap.js" />
+    <Content Remove="wwwroot\assets\js\dataTables\jquery.dataTables.js" />
+    <Content Remove="wwwroot\assets\js\easypiechart-data.js" />
+    <Content Remove="wwwroot\assets\js\easypiechart.js" />
+    <Content Remove="wwwroot\assets\js\jquery-1.10.2.js" />
+    <Content Remove="wwwroot\assets\js\jquery.metisMenu.js" />
+    <Content Remove="wwwroot\assets\js\Lightweight-Chart\chart.js" />
+    <Content Remove="wwwroot\assets\js\Lightweight-Chart\cssCharts.css" />
+    <Content Remove="wwwroot\assets\js\Lightweight-Chart\index - Copy.html" />
+    <Content Remove="wwwroot\assets\js\Lightweight-Chart\index.html" />
+    <Content Remove="wwwroot\assets\js\Lightweight-Chart\jquery.chart.js" />
+    <Content Remove="wwwroot\assets\js\Lightweight-Chart\jquery.chart.min.js" />
+    <Content Remove="wwwroot\assets\js\Lightweight-Chart\README.md" />
+    <Content Remove="wwwroot\assets\js\morris\morris-0.4.3.min.css" />
+    <Content Remove="wwwroot\assets\js\morris\morris.js" />
+    <Content Remove="wwwroot\assets\js\morris\raphael-2.1.0.min.js" />
+    <Content Remove="wwwroot\assets\materialize\css\materialize.css" />
+    <Content Remove="wwwroot\assets\materialize\css\materialize.min.css" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Bold.eot" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Bold.ttf" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Bold.woff" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Bold.woff2" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Light.eot" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Light.ttf" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Light.woff" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Light.woff2" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Medium.eot" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Medium.ttf" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Medium.woff" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Medium.woff2" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Regular.eot" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Regular.ttf" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Regular.woff" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Regular.woff2" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Thin.eot" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Thin.ttf" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Thin.woff" />
+    <Content Remove="wwwroot\assets\materialize\fonts\roboto\Roboto-Thin.woff2" />
+    <Content Remove="wwwroot\assets\materialize\js\materialize.js" />
+    <Content Remove="wwwroot\assets\materialize\js\materialize.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\css\bootstrap-theme.min.css" />
+    <None Include="wwwroot\assets\css\bootstrap.css" />
+    <None Include="wwwroot\assets\css\custom-styles.css" />
+    <None Include="wwwroot\assets\css\font-awesome.css" />
+    <None Include="wwwroot\assets\font-awesome\fonts\fontawesome-webfontba72.eot" />
+    <None Include="wwwroot\assets\font-awesome\fonts\fontawesome-webfontba72.svg" />
+    <None Include="wwwroot\assets\font-awesome\fonts\fontawesome-webfontba72.ttf" />
+    <None Include="wwwroot\assets\font-awesome\fonts\fontawesome-webfontba72.woff" />
+    <None Include="wwwroot\assets\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\assets\fonts\glyphicons-halflings-regulard41d.eot" />
+    <None Include="wwwroot\assets\img\bg-img.jpg" />
+    <None Include="wwwroot\assets\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\js\chart-data.js" />
+    <None Include="wwwroot\assets\js\chart.min.js" />
+    <None Include="wwwroot\assets\js\custom-scripts.js" />
+    <None Include="wwwroot\assets\js\custom.js" />
+    <None Include="wwwroot\assets\js\dataTables\dataTables.bootstrap.css" />
+    <None Include="wwwroot\assets\js\dataTables\dataTables.bootstrap.js" />
+    <None Include="wwwroot\assets\js\dataTables\jquery.dataTables.js" />
+    <None Include="wwwroot\assets\js\easypiechart-data.js" />
+    <None Include="wwwroot\assets\js\easypiechart.js" />
+    <None Include="wwwroot\assets\js\jquery-1.10.2.js" />
+    <None Include="wwwroot\assets\js\jquery.metisMenu.js" />
+    <None Include="wwwroot\assets\js\Lightweight-Chart\chart.js" />
+    <None Include="wwwroot\assets\js\Lightweight-Chart\cssCharts.css" />
+    <None Include="wwwroot\assets\js\Lightweight-Chart\index - Copy.html" />
+    <None Include="wwwroot\assets\js\Lightweight-Chart\index.html" />
+    <None Include="wwwroot\assets\js\Lightweight-Chart\jquery.chart.js" />
+    <None Include="wwwroot\assets\js\Lightweight-Chart\jquery.chart.min.js" />
+    <None Include="wwwroot\assets\js\Lightweight-Chart\README.md" />
+    <None Include="wwwroot\assets\js\morris\morris-0.4.3.min.css" />
+    <None Include="wwwroot\assets\js\morris\morris.js" />
+    <None Include="wwwroot\assets\js\morris\raphael-2.1.0.min.js" />
+    <None Include="wwwroot\assets\materialize\css\materialize.css" />
+    <None Include="wwwroot\assets\materialize\css\materialize.min.css" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Bold.eot" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Bold.ttf" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Bold.woff" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Bold.woff2" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Light.eot" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Light.ttf" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Light.woff" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Light.woff2" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Medium.eot" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Medium.ttf" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Medium.woff" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Medium.woff2" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Regular.eot" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Regular.ttf" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Regular.woff" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Regular.woff2" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Thin.eot" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Thin.ttf" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Thin.woff" />
+    <None Include="wwwroot\assets\materialize\fonts\roboto\Roboto-Thin.woff2" />
+    <None Include="wwwroot\assets\materialize\js\materialize.js" />
+    <None Include="wwwroot\assets\materialize\js\materialize.min.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.4.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="4.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\2.Application\Met.Core.IServices\Mk.Chain.Core.IServices.csproj" />
+    <ProjectReference Include="..\src\2.Application\Met.Core.Services\Mk.Chain.Core.Services.csproj" />
+    <ProjectReference Include="..\src\3.Repository\Met.Core.IRepository\Mk.Chain.Core.IRepository.csproj" />
+    <ProjectReference Include="..\src\3.Repository\Met.Core.Repository.SqlServer\Mk.Chain.Core.Repository.SqlServer.csproj" />
+    <ProjectReference Include="..\src\4.Entity\Met.Core.Models\Mk.Chain.Core.Models.csproj" />
+    <ProjectReference Include="..\src\4.Entity\Met.Core.ViewModel\Mk.Chain.Core.ViewModel.csproj" />
+    <ProjectReference Include="..\src\5.Infrastructure\Met.Core.Util\Mk.Chain.Core.Util.csproj" />
+  </ItemGroup>
+
+</Project>

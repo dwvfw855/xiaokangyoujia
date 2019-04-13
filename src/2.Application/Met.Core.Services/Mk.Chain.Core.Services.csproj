@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\1.UI\Met.Core.Admin\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extend\**" />
+    <Compile Remove="MkChain\**" />
+    <Compile Remove="mkSys\**" />
+    <EmbeddedResource Remove="Extend\**" />
+    <EmbeddedResource Remove="MkChain\**" />
+    <EmbeddedResource Remove="mkSys\**" />
+    <None Remove="Extend\**" />
+    <None Remove="MkChain\**" />
+    <None Remove="mkSys\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\3.Repository\Met.Core.IRepository\Mk.Chain.Core.IRepository.csproj" />
+    <ProjectReference Include="..\..\4.Entity\Met.Core.Models\Mk.Chain.Core.Models.csproj" />
+    <ProjectReference Include="..\..\5.Infrastructure\Met.Core.Util\Mk.Chain.Core.Util.csproj" />
+    <ProjectReference Include="..\Met.Core.IServices\Mk.Chain.Core.IServices.csproj" />
+  </ItemGroup>
+
+</Project>

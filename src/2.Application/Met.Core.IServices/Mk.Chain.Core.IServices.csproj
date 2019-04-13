@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IMkChain\**" />
+    <EmbeddedResource Remove="IMkChain\**" />
+    <None Remove="IMkChain\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\4.Entity\Met.Core.Models\Mk.Chain.Core.Models.csproj" />
+    <ProjectReference Include="..\..\4.Entity\Met.Core.ViewModel\Mk.Chain.Core.ViewModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extend\" />
+  </ItemGroup>
+
+</Project>

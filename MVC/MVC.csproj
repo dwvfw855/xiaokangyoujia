@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Privacy.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="Views\Shared\_CookieConsentPartial.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.9.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.4.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="4.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\2.Application\Met.Core.IServices\Mk.Chain.Core.IServices.csproj" />
+    <ProjectReference Include="..\src\2.Application\Met.Core.Services\Mk.Chain.Core.Services.csproj" />
+    <ProjectReference Include="..\src\3.Repository\Met.Core.IRepository\Mk.Chain.Core.IRepository.csproj" />
+    <ProjectReference Include="..\src\3.Repository\Met.Core.Repository.SqlServer\Mk.Chain.Core.Repository.SqlServer.csproj" />
+    <ProjectReference Include="..\src\4.Entity\Met.Core.Models\Mk.Chain.Core.Models.csproj" />
+    <ProjectReference Include="..\src\5.Infrastructure\Met.Core.Util\Mk.Chain.Core.Util.csproj" />
+  </ItemGroup>
+
+</Project>
