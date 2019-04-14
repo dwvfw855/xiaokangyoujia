@@ -14,15 +14,25 @@ namespace MVC.Controllers
     {
         private readonly Imodule_mainServices _module_mainServicesServices;
 
-        public HomeController(Imodule_mainServices module_mainServicesServices)
+        private readonly Imodule_homechildrenServices _module_homechildrenServices;
+
+        public HomeController(Imodule_mainServices module_mainServicesServices, Imodule_homechildrenServices module_homechildrenServices)
         {
             _module_mainServicesServices = module_mainServicesServices;
+            _module_homechildrenServices= module_homechildrenServices;
         }
         public  IActionResult Index()
         {
+            //获取主菜单
              List<module_main> List =   _module_mainServicesServices.Query();
+            ViewBag.Homelist = List;
+            //获取首页下的功能菜单
+            List<module_homechildren> childrenList = _module_homechildrenServices.Query();
+            ViewBag.childrenList = childrenList;
 
-            ViewBag.list = List;
+
+
+
                 return View();
         }
 

@@ -63,61 +63,72 @@
         <!--nav start-->
         <div id="nav">
             <nav class="clearfix">
-                <a href="Integral_mall.html">
-                    <img src="~/images/1.png" />
-                    <span>积分商城</span>
-                </a>
-                <a href="Media.html">
-                    <img src="~/images/2.png" />
-                    <span>影音天地</span>
-                </a>
-                <a href="Birthday_zone.html">
-                    <img src="~/images/3.png" />
-                    <span>生日专区</span>
-                </a>
-                <a href="Orchard_fragrance.html">
-                    <img src="~/images/4.png" />
-                    <span>果园飘香</span>
-                </a>
-                <a href="Inner_page.html">
-                    <img src="~/images/5.png" />
-                    <span>关爱健康</span>
-                </a>
-                <a href="Seasonal_selection.html">
-                    <img src="~/images/6.png" />
-                    <span>应季甄选</span>
-                </a>
-                <a href="Inner_page.html">
-                    <img src="~/images/7.png" />
-                    <span>轻松出行</span>
-                </a>
-                <a href="Inner_page.html">
-                    <img src="~/images/8.png" />
-                    <span>景点门票</span>
-                </a>
+
+              
+
+                @foreach (var item in ViewBag.childrenList as List<Mk.Chain.Core.Models.module_homechildren>)
+                {
+                    <a href="@item.ChildrenMenuUrl">
+                        <img src="@item.ChildrenMenuImgUrl" />
+                        <span>@item.ChildrenMenuName</span>
+                    </a>
+                }
+
+                @*<a href="Integral_mall.html">
+            <img src="~/images/1.png" />
+            <span>积分商城</span>
+        </a>
+        <a href="Media.html">
+            <img src="~/images/2.png" />
+            <span>影音天地</span>
+        </a>
+        <a href="Birthday_zone.html">
+            <img src="~/images/3.png" />
+            <span>生日专区</span>
+        </a>
+        <a href="Orchard_fragrance.html">
+            <img src="~/images/4.png" />
+            <span>果园飘香</span>
+        </a>
+        <a href="Inner_page.html">
+            <img src="~/images/5.png" />
+            <span>关爱健康</span>
+        </a>
+        <a href="Seasonal_selection.html">
+            <img src="~/images/6.png" />
+            <span>应季甄选</span>
+        </a>
+        <a href="Inner_page.html">
+            <img src="~/images/7.png" />
+            <span>轻松出行</span>
+        </a>
+        <a href="Inner_page.html">
+            <img src="~/images/8.png" />
+            <span>景点门票</span>
+        </a>*@
                 <div class="edmond clearfix">
                     夏季炎热签收水果前请确认
                     <span class="sprite-icon"></span>
                     <!--<div class="swiper-container edmond_child">
-                    <ul class="swiper-wrapper edmond_width clearfix">
-                        <li class="swiper-slide edmond_con fl">
-                            夏季炎热签收水果前请确认
-                        </li>
-                        <li class="swiper-slide edmond_con fl">
-                            夏季炎热签收水果前请确认
-                        </li>
-                        <li class="swiper-slide edmond_con fl">
-                            夏季炎热签收水果前请确认
-                        </li>
-                        <li class="swiper-slide edmond_con fl">
-                            夏季炎热签收水果前请确认
-                        </li>
-                        <li class="swiper-slide edmond_con fl">
-                            夏季炎热签收水果前请确认
-                        </li>
-                    </ul>
-                </div>-->
-                </div>
+            <ul class="swiper-wrapper edmond_width clearfix">
+                <li class="swiper-slide edmond_con fl">
+                    夏季炎热签收水果前请确认
+                </li>
+                <li class="swiper-slide edmond_con fl">
+                    夏季炎热签收水果前请确认
+                </li>
+                <li class="swiper-slide edmond_con fl">
+                    夏季炎热签收水果前请确认
+                </li>
+                <li class="swiper-slide edmond_con fl">
+                    夏季炎热签收水果前请确认
+                </li>
+                <li class="swiper-slide edmond_con fl">
+                    夏季炎热签收水果前请确认
+                </li>
+            </ul>
+        </div>-->
+                </div>foreach
             </nav>
         </div>
         <!--生日专区 end-->
@@ -274,7 +285,7 @@
         <!--menu  start-->
         <div id="menu">
             <ul>
-                @foreach (var item in ViewBag.list as List<Mk.Chain.Core.Models.module_main>)
+                @foreach (var item in ViewBag.Homelist as List<Mk.Chain.Core.Models.module_main>)
                 {
 
                     @if (item.ModuleName == "首页")

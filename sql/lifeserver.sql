@@ -10,10 +10,36 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2019-04-10 21:36:33
+Date: 2019-04-14 19:09:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for module_homechildren
+-- ----------------------------
+DROP TABLE IF EXISTS `module_homechildren`;
+CREATE TABLE `module_homechildren` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `mainID` int(11) DEFAULT NULL,
+  `ChildrenMenuID` int(11) DEFAULT NULL,
+  `ChildrenMenuName` varchar(255) DEFAULT NULL,
+  `ChildrenMenuImgUrl` varchar(255) DEFAULT NULL,
+  `ChildrenMenuUrl` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of module_homechildren
+-- ----------------------------
+INSERT INTO `module_homechildren` VALUES ('1', '1', null, '积分商城', '/images/1.png', 'index.html');
+INSERT INTO `module_homechildren` VALUES ('2', '1', null, '影音天地', '/images/2.png', 'index.html');
+INSERT INTO `module_homechildren` VALUES ('3', '1', null, '生日专区', '/images/3.png', 'index.html');
+INSERT INTO `module_homechildren` VALUES ('4', '1', null, '果园飘香', '/images/4.png', 'index.html');
+INSERT INTO `module_homechildren` VALUES ('5', '1', null, '关爱健康', '/images/5.png', 'index.html');
+INSERT INTO `module_homechildren` VALUES ('6', '1', null, '应季甄选', '/images/6.png', 'index.html');
+INSERT INTO `module_homechildren` VALUES ('7', '1', null, '轻松出行', '/images/7.png', 'index.html');
+INSERT INTO `module_homechildren` VALUES ('8', '1', null, '景点门票', '/images/8.png', 'index.html');
 
 -- ----------------------------
 -- Table structure for module_main
