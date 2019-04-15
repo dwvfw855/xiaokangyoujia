@@ -1,0 +1,13 @@
+1. 项目下 
+git init  
+2.将更改文件添加缓存区
+ git add .  
+3.将缓存中的文件Commit到本地git库
+
+git commit -m "添加你的注释,一般是一些更改信息"
+
+
+4.git push origin master  远程分支
+
+
+5.git pull 更新代码
