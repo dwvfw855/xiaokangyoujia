@@ -35,4 +35,11 @@
     <ProjectReference Include="..\src\5.Infrastructure\Met.Core.Util\Mk.Chain.Core.Util.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

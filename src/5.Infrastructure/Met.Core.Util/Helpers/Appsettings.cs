@@ -25,17 +25,12 @@ namespace Mk.Chain.Core.Util.Helpers
         /// </summary>
         /// <param name="sections"></param>
         /// <returns></returns>
-        public static string GetConfig(params string[] sections)
+        public static string GetConfig(string sections)
         {
             try
             {
-                var val = string.Empty;
-                for (int i = 0; i < sections.Length; i++)
-                {
-                    val += sections[i] + ":";
-                }
 
-                return Configuration[val.TrimEnd(':')];
+            return    Configuration[sections];
             }
             catch (Exception)
             {
