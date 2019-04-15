@@ -2,13 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Mk.Chain.Core.IRepository.Base
 {
-   public interface ITaskRepository: ISysBaseRepository<Task>
+   public interface IShop_DetailRepository : ISysBaseRepository<shop_detail>
     {
+        List<shop_detail> Query();
 
-        List<Task> Get();
 
 
     }

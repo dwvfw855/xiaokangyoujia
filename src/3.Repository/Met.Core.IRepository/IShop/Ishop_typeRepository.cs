@@ -2,11 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Mk.Chain.Core.IRepository.Base
 {
-    public interface IChargeLogsRepository : IBaseRepository<ChargeLogs>
+   public interface Ishop_typeRepository : ISysBaseRepository<shop_type>
     {
-        List<ChargeLogs> getlist();
+        List<shop_type> Query();
+
+
+
     }
 }

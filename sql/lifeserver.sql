@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2019-04-14 19:09:39
+Date: 2019-04-15 22:27:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -77,6 +77,67 @@ INSERT INTO `module_relationformain` VALUES ('1', '1', '家电清洗');
 INSERT INTO `module_relationformain` VALUES ('2', '1', '清洗套餐');
 INSERT INTO `module_relationformain` VALUES ('3', '1', '居家换新');
 INSERT INTO `module_relationformain` VALUES ('4', null, '健康生活');
+
+-- ----------------------------
+-- Table structure for shop_detail
+-- ----------------------------
+DROP TABLE IF EXISTS `shop_detail`;
+CREATE TABLE `shop_detail` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `OrderListID` int(11) DEFAULT NULL,
+  `detailContent` text,
+  `detailSpecifications` longtext,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of shop_detail
+-- ----------------------------
+INSERT INTO `shop_detail` VALUES ('2', '1', '<div class=\"name_box \" style=\"display: none;\">\r\n						<img src=\"images/xqq/sp_2.png\">\r\n						<img src=\"images/xqq/sp_1.png\">\r\n					</div>', '<div class=\"name_box detail_width_con\" style=\"display: block;\">\r\n						<span class=\"detail_main\">品牌及名称：海尔变频空调海尔变频空调</span>\r\n						<span class=\"detail_main\">型号：AB-DCN03</span>\r\n						<span class=\"detail_main\">规格：280x308x292</span>\r\n						<span class=\"detail_main\">材质：钢化模型</span>\r\n						<span class=\"detail_main\">产地：上海</span>\r\n						<span class=\"detail_main\">配送时间：我们会在您下单后的2-3个工作日内日发货</span>\r\n					</div>');
+
+-- ----------------------------
+-- Table structure for shop_orderlist
+-- ----------------------------
+DROP TABLE IF EXISTS `shop_orderlist`;
+CREATE TABLE `shop_orderlist` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ShopName` varchar(255) DEFAULT NULL,
+  `ShopMoney` varchar(255) DEFAULT NULL,
+  `ShopMoneyInteGral` varchar(255) DEFAULT NULL,
+  `ZHID` varchar(255) DEFAULT NULL,
+  `ShopType` varchar(255) DEFAULT NULL,
+  `OrderImgUrl` varchar(255) DEFAULT NULL,
+  `CeateTime` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of shop_orderlist
+-- ----------------------------
+INSERT INTO `shop_orderlist` VALUES ('1', '迷你智能电饭煲', '100', '100', null, '3', 'images/jifen/sp.png', null);
+INSERT INTO `shop_orderlist` VALUES ('2', '迷你智能电饭煲', '100', '100', '', '3', 'images/jifen/sp.png', null);
+INSERT INTO `shop_orderlist` VALUES ('3', '迷你智能电饭煲', '100', '100', null, '3', 'images/jifen/sp.png', null);
+
+-- ----------------------------
+-- Table structure for shop_type
+-- ----------------------------
+DROP TABLE IF EXISTS `shop_type`;
+CREATE TABLE `shop_type` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Type` varchar(255) DEFAULT NULL COMMENT '商品类型',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of shop_type
+-- ----------------------------
+INSERT INTO `shop_type` VALUES ('1', '美容');
+INSERT INTO `shop_type` VALUES ('2', '电子');
+INSERT INTO `shop_type` VALUES ('3', '家居');
+INSERT INTO `shop_type` VALUES ('4', '美食');
+INSERT INTO `shop_type` VALUES ('5', '服饰');
+INSERT INTO `shop_type` VALUES ('6', '母婴');
+INSERT INTO `shop_type` VALUES ('7', '运动');
 
 -- ----------------------------
 -- Table structure for user_maininfo

@@ -8,11 +8,13 @@ using Mk.Chain.Core.Models;
 
 namespace Mk.Chain.Core.Repository.SqlServer
 {
-    public class ChargeLogsRepostory : BaseRepository<ChargeLogs>, IChargeLogsRepository
+    public class Shop_DetailRepository : BaseRepository<shop_detail>, IShop_DetailRepository
     {
-        public List<ChargeLogs> getlist()
+        public  List<shop_detail> Query()
         {
-           return Db.Queryable<ChargeLogs>().ToList();
+            
+                return  Db.Queryable<shop_detail>().ToList();
+           
         }
     }
 }

@@ -7,10 +7,13 @@
   <ItemGroup>
     <Compile Remove="Base\Mkchain\**" />
     <Compile Remove="Base\Mksys\**" />
+    <Compile Remove="Extend\**" />
     <EmbeddedResource Remove="Base\Mkchain\**" />
     <EmbeddedResource Remove="Base\Mksys\**" />
+    <EmbeddedResource Remove="Extend\**" />
     <None Remove="Base\Mkchain\**" />
     <None Remove="Base\Mksys\**" />
+    <None Remove="Extend\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,10 +31,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\4.Entity\Met.Core.Models\Mk.Chain.Core.Models.csproj" />
     <ProjectReference Include="..\..\4.Entity\Met.Core.ViewModel\Mk.Chain.Core.ViewModel.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Extend\" />
   </ItemGroup>
 
 </Project>
