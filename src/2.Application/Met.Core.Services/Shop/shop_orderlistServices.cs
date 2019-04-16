@@ -14,9 +14,14 @@ namespace Mk.Chain.Core.Services.Base
 
         Ishop_orderlistRepository _dal;
 
-        public shop_orderlistServices(Ishop_orderlistRepository dal)
+        public  shop_orderlistServices(Ishop_orderlistRepository dal)
         {
             _dal = dal;
+        }
+
+        public int insert(shop_orderlist sp)
+        {
+            return _dal.insert(sp);
         }
 
         public  List<shop_orderlist> Query(int pageindex, int pageSize, string type)

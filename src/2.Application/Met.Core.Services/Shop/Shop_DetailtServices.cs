@@ -19,6 +19,11 @@ namespace Mk.Chain.Core.Services.Base
             _dal = dal;
         }
 
+        public int Insert(shop_detail sp)
+        {
+            return _dal.Insert(sp);
+        }
+
         public  List<shop_detail> Query()
         {
             return  _dal.Query();

@@ -33,5 +33,39 @@ namespace MVC.Controllers
 
             return View();
         }
+
+
+
+
+        public IActionResult InsertOrdertest()
+        {
+
+            shop_orderlist shopOrderList = new shop_orderlist();
+            shopOrderList.CeateTime = DateTime.Now.ToString();
+            shopOrderList.GUID = Guid.NewGuid().ToString("N");
+            shopOrderList.OrderImgUrl = "images/jifen/sp.png";
+            shopOrderList.ShopMoney = "100";
+            shopOrderList.ShopType = "3";
+            shopOrderList.ShopName = "测试商品";
+            _Ishop_orderlistServices.insert(shopOrderList);
+
+
+
+
+
+            return Ok("1");
+        }
+
+
+
+        //public IActionResult Detail(string ID)
+        //{
+
+             
+
+        //}
+
+
+
     }
 }

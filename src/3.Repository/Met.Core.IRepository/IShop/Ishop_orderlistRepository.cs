@@ -10,7 +10,7 @@ namespace Mk.Chain.Core.IRepository.Base
     {
         List<shop_orderlist> Query(int pageindex, int pageSize, string type);
 
-
+        int insert(shop_orderlist sp);
 
     }
 }

@@ -44,5 +44,11 @@ namespace Mk.Chain.Core.Models
            /// </summary>           
            public string detailSpecifications {get;set;}
 
+
+
+
+
+        public string MainGUID { get; set; }
+
     }
 }

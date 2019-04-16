@@ -9,5 +9,8 @@ namespace Mk.Chain.Core.IServices
   public interface IShop_DetailServices : IBaseServices<shop_detail> 
     {
         List<shop_detail> Query();
+
+
+        int Insert(shop_detail sp);
     }
 }

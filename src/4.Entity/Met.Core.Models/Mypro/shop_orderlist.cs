@@ -72,5 +72,8 @@ namespace Mk.Chain.Core.Models
            /// </summary>           
            public string CeateTime {get;set;}
 
+
+        public string GUID { get; set; }
+
     }
 }

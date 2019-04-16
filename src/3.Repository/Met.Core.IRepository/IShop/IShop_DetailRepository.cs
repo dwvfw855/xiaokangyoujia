@@ -10,7 +10,7 @@ namespace Mk.Chain.Core.IRepository.Base
     {
         List<shop_detail> Query();
 
-
+        int Insert(shop_detail sp);
 
     }
 }

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2019-04-15 22:27:07
+Date: 2019-04-16 10:41:10
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,7 +32,7 @@ CREATE TABLE `module_homechildren` (
 -- ----------------------------
 -- Records of module_homechildren
 -- ----------------------------
-INSERT INTO `module_homechildren` VALUES ('1', '1', null, '积分商城', '/images/1.png', 'index.html');
+INSERT INTO `module_homechildren` VALUES ('1', '1', null, '积分商城', '/images/1.png', 'Integral/MainShop');
 INSERT INTO `module_homechildren` VALUES ('2', '1', null, '影音天地', '/images/2.png', 'index.html');
 INSERT INTO `module_homechildren` VALUES ('3', '1', null, '生日专区', '/images/3.png', 'index.html');
 INSERT INTO `module_homechildren` VALUES ('4', '1', null, '果园飘香', '/images/4.png', 'index.html');
@@ -76,7 +76,7 @@ CREATE TABLE `module_relationformain` (
 INSERT INTO `module_relationformain` VALUES ('1', '1', '家电清洗');
 INSERT INTO `module_relationformain` VALUES ('2', '1', '清洗套餐');
 INSERT INTO `module_relationformain` VALUES ('3', '1', '居家换新');
-INSERT INTO `module_relationformain` VALUES ('4', null, '健康生活');
+INSERT INTO `module_relationformain` VALUES ('4', '1', '健康生活');
 
 -- ----------------------------
 -- Table structure for shop_detail
@@ -87,13 +87,14 @@ CREATE TABLE `shop_detail` (
   `OrderListID` int(11) DEFAULT NULL,
   `detailContent` text,
   `detailSpecifications` longtext,
+  `MainGUID` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of shop_detail
 -- ----------------------------
-INSERT INTO `shop_detail` VALUES ('2', '1', '<div class=\"name_box \" style=\"display: none;\">\r\n						<img src=\"images/xqq/sp_2.png\">\r\n						<img src=\"images/xqq/sp_1.png\">\r\n					</div>', '<div class=\"name_box detail_width_con\" style=\"display: block;\">\r\n						<span class=\"detail_main\">品牌及名称：海尔变频空调海尔变频空调</span>\r\n						<span class=\"detail_main\">型号：AB-DCN03</span>\r\n						<span class=\"detail_main\">规格：280x308x292</span>\r\n						<span class=\"detail_main\">材质：钢化模型</span>\r\n						<span class=\"detail_main\">产地：上海</span>\r\n						<span class=\"detail_main\">配送时间：我们会在您下单后的2-3个工作日内日发货</span>\r\n					</div>');
+INSERT INTO `shop_detail` VALUES ('2', '1', '<div class=\"name_box \" style=\"display: none;\">\r\n						<img src=\"images/xqq/sp_2.png\">\r\n						<img src=\"images/xqq/sp_1.png\">\r\n					</div>', '<div class=\"name_box detail_width_con\" style=\"display: block;\">\r\n						<span class=\"detail_main\">品牌及名称：海尔变频空调海尔变频空调</span>\r\n						<span class=\"detail_main\">型号：AB-DCN03</span>\r\n						<span class=\"detail_main\">规格：280x308x292</span>\r\n						<span class=\"detail_main\">材质：钢化模型</span>\r\n						<span class=\"detail_main\">产地：上海</span>\r\n						<span class=\"detail_main\">配送时间：我们会在您下单后的2-3个工作日内日发货</span>\r\n					</div>', null);
 
 -- ----------------------------
 -- Table structure for shop_orderlist
@@ -108,15 +109,19 @@ CREATE TABLE `shop_orderlist` (
   `ShopType` varchar(255) DEFAULT NULL,
   `OrderImgUrl` varchar(255) DEFAULT NULL,
   `CeateTime` varchar(255) DEFAULT NULL,
+  `GUID` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of shop_orderlist
 -- ----------------------------
-INSERT INTO `shop_orderlist` VALUES ('1', '迷你智能电饭煲', '100', '100', null, '3', 'images/jifen/sp.png', null);
-INSERT INTO `shop_orderlist` VALUES ('2', '迷你智能电饭煲', '100', '100', '', '3', 'images/jifen/sp.png', null);
-INSERT INTO `shop_orderlist` VALUES ('3', '迷你智能电饭煲', '100', '100', null, '3', 'images/jifen/sp.png', null);
+INSERT INTO `shop_orderlist` VALUES ('1', '迷你智能电饭煲', '100', '100', null, '3', 'images/jifen/sp.png', null, null);
+INSERT INTO `shop_orderlist` VALUES ('2', '迷你智能电饭煲', '100', '100', '', '3', 'images/jifen/sp.png', null, null);
+INSERT INTO `shop_orderlist` VALUES ('3', '迷你智能电饭煲', '100', '100', null, '3', 'images/jifen/sp.png', null, null);
+INSERT INTO `shop_orderlist` VALUES ('4', null, '100', null, null, '3', 'images/jifen/sp.png', '2019/4/16 10:28:16', '00000000000000000000000000000000');
+INSERT INTO `shop_orderlist` VALUES ('5', '测试商品', '100', null, null, '3', 'images/jifen/sp.png', '2019/4/16 10:30:19', '00000000000000000000000000000000');
+INSERT INTO `shop_orderlist` VALUES ('6', '测试商品', '100', null, null, '3', 'images/jifen/sp.png', '2019/4/16 10:31:23', 'e44d0d28eb3e4057a43ac050ed6fb064');
 
 -- ----------------------------
 -- Table structure for shop_type

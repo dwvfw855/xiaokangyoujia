@@ -9,5 +9,9 @@ namespace Mk.Chain.Core.IServices
   public interface Ishop_orderlistServices : IBaseServices<shop_orderlist> 
     {
         List<shop_orderlist> Query(int pageindex,int pageSize,string type);
+
+
+
+        int insert(shop_orderlist sp);
     }
 }

@@ -16,5 +16,30 @@ namespace Mk.Chain.Core.Repository.SqlServer
                 return  Db.Queryable<shop_detail>().ToList();
            
         }
+
+        public int Insert(shop_detail sp)
+        {
+
+            return Db.Insertable<shop_detail>(sp).ExecuteCommand();
+
+
+        }
+
+
+        public shop_detail GetDetailForGuid(string ID)
+        {
+            shop_detail sp = null;
+         var shop_detailqure=   Db.Queryable<shop_detail>().Where(m => m.MainGUID == ID);
+            if (shop_detailqure.Count()>0)
+            {
+                sp= shop_detailqure.First();
+            }
+
+
+            return sp;
+        }
+
+
+
     }
 }

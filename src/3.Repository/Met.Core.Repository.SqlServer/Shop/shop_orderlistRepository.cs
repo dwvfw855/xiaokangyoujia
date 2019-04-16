@@ -10,13 +10,21 @@ namespace Mk.Chain.Core.Repository.SqlServer
 {
     public class shop_orderlistRepository : BaseRepository<shop_orderlist>, Ishop_orderlistRepository
     {
+        public int insert(shop_orderlist sp)
+        {
+            return Db.Insertable<shop_orderlist>(sp).ExecuteCommand();
+        }
+
         public  List<shop_orderlist> Query(int pageindex, int pageSize, string type)
         {    
            
 
 
-                return  Db.Queryable<shop_orderlist>().OrderBy(m=>m.CeateTime).Skip(pageSize*(pageindex-1)).Take(pageindex).ToList();
+                return  Db.Queryable<shop_orderlist>().OrderBy(m=>m.CeateTime).Skip(pageSize*(pageindex-1)).Take(pageSize).ToList();
            
         }
+
+
+
     }
 }
