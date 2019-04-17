@@ -8,7 +8,7 @@ namespace Mk.Chain.Core.IRepository.Base
 {
    public interface Imodule_mainRepository : ISysBaseRepository<module_main>
     {
-        List<module_main> Query();
+        Task<List<module_main>> Query();
 
 
 

@@ -8,6 +8,6 @@ namespace Mk.Chain.Core.IServices
 {
   public interface Imodule_mainServices : IBaseServices<module_main> 
     {
-        List<module_main> Query();
+        Task<List<module_main>> Query();
     }
 }

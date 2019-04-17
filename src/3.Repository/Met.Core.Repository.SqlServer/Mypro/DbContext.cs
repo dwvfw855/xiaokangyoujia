@@ -7,7 +7,7 @@ namespace Mk.Chain.Core.Repository.SqlServer
 {
     public class DbContext
     {
-
+        
         private static string _connectionString;
         private static DbType _dbType;
         private SqlSugarClient _db;
@@ -62,7 +62,7 @@ namespace Mk.Chain.Core.Repository.SqlServer
                 ConnectionString = _connectionString,
                 DbType = _dbType,
                 IsAutoCloseConnection = true,
-                IsShardSameThread = true,
+                IsShardSameThread = false,
                 ConfigureExternalServices = new ConfigureExternalServices()
                 {
                     //DataInfoCacheService = new HttpRuntimeCache()
@@ -88,7 +88,7 @@ namespace Mk.Chain.Core.Repository.SqlServer
                 ConnectionString = _connectionString,
                 DbType = _dbType,
                 IsAutoCloseConnection = blnIsAutoCloseConnection,
-                IsShardSameThread = true,
+                IsShardSameThread = false,
                 ConfigureExternalServices = new ConfigureExternalServices()
                 {
                     //DataInfoCacheService = new HttpRuntimeCache()

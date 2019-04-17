@@ -21,10 +21,10 @@ namespace MVC.Controllers
             _module_mainServicesServices = module_mainServicesServices;
             _module_homechildrenServices= module_homechildrenServices;
         }
-        public  IActionResult Index()
+        public  async Task<IActionResult> Index()
         {
             //获取主菜单
-             List<module_main> List =   _module_mainServicesServices.Query();
+             List<module_main> List =   await _module_mainServicesServices.Query();
             ViewBag.Homelist = List;
             //获取首页下的功能菜单
             List<module_homechildren> childrenList = _module_homechildrenServices.Query();

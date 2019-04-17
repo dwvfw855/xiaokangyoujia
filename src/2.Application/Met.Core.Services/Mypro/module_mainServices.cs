@@ -19,9 +19,9 @@ namespace Mk.Chain.Core.Services.Base
             _dal = dal;
         }
 
-        public  List<module_main> Query()
+        public async Task<List<module_main>> Query()
         {
-            return  _dal.Query();
+            return  await _dal.Query();
         }
     }
 }

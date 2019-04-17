@@ -10,10 +10,10 @@ namespace Mk.Chain.Core.Repository.SqlServer
 {
     public class module_mainRepository : BaseRepository<module_main>, Imodule_mainRepository
     {
-        public  List<module_main> Query()
+        public async Task<List<module_main>> Query()
         {
-            
-                return  Db.Queryable<module_main>().ToList();
+
+            return await Db.Queryable<module_main>().ToListAsync();
            
         }
     }
