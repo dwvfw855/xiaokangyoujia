@@ -6,6 +6,7 @@
 /MVC/obj/Debug/netcoreapp2.2
 /MVC/obj/Release/netcoreapp2.2
 /MVC/obj
+/MVC/bin
 /src/1.UI/Met.Core.Admin/obj
 /src/2.Application/Met.Core.IServices/bin
 /src/2.Application/Met.Core.IServices/obj
