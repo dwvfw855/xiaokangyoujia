@@ -1,6 +1,7 @@
 ﻿
 
 using Mk.Chain.Core.IRepository;
+using Mk.Chain.Core.Util.Helpers;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,18 @@ namespace Mk.Chain.Core.Repository.SqlServer
         private SqlSugarClient db;
         private SimpleClient<TEntity> entityDB;
 
+        private RedisHelper _redishelper;
+
         public DbContext Context
         {
             get { return context; }
             set { context = value; }
+        }
+        public RedisHelper Redis
+        {
+            get { return _redishelper; }
+            set { _redishelper = value; }
+
         }
         internal SqlSugarClient Db
         {
@@ -37,6 +46,7 @@ namespace Mk.Chain.Core.Repository.SqlServer
             context = DbContext.GetDbContext();
             db = context.Db;
             entityDB = context.GetEntityDB<TEntity>(db);
+            _redishelper = new RedisHelper(1);
         }
 
         public TEntity QueryByID(object objId)

@@ -1,4 +1,5 @@
-﻿using SqlSugar;
+﻿using Mk.Chain.Core.Util.Helpers;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,6 +21,11 @@ namespace Mk.Chain.Core.Repository.SqlServer
             get { return _connectionString; }
             set { _connectionString = value; }
         }
+
+
+       
+
+
         /// <summary>
         /// 数据库类型 
         /// </summary>

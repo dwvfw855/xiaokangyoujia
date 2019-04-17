@@ -12,9 +12,25 @@ namespace Mk.Chain.Core.Repository.SqlServer
     {
         public async Task<List<module_main>> Query()
         {
+            List<module_main> List = null;
+            if (Redis.StringGet("ccc") == null)
+            {
+                List = await Db.Queryable<module_main>().ToListAsync();
+                Redis.StringSet("ccc", Newtonsoft.Json.JsonConvert.SerializeObject(List));
+            }
+            else
+            {
+                // string vaulse=     ;
+                List = Newtonsoft.Json.JsonConvert.DeserializeObject<List<module_main>>(Redis.StringGet("ccc"));
 
-            return await Db.Queryable<module_main>().ToListAsync();
-           
+
+
+            }
+
+            return List;
+
+          //  return await Db.Queryable<module_main>().ToListAsync();
+
         }
     }
 }
