@@ -10,6 +10,11 @@ namespace Mk.Chain.Core.Repository.SqlServer
 {
     public class shop_typeRepository : BaseRepository<shop_detail>, Ishop_typeRepository
     {
+
+        public shop_typeRepository():base(1)
+        {
+
+        }
         public  List<shop_type> Query()
         {
             

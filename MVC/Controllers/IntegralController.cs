@@ -35,6 +35,18 @@ namespace MVC.Controllers
         }
 
 
+        public IActionResult ShopDetail(string guid) {
+
+
+
+            Mk.Chain.Core.Models.shop_detail sp= _IShop_DetailServices.GetShop_Detail(guid);
+
+
+            return View(sp);
+
+        }
+
+
 
 
         public IActionResult InsertOrdertest()

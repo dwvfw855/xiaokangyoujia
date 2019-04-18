@@ -19,6 +19,11 @@ namespace Mk.Chain.Core.Services.Base
             _dal = dal;
         }
 
+        public shop_detail GetShop_Detail(string guid)
+        {
+            return _dal.GetShop_Detail(guid);
+        }
+
         public int Insert(shop_detail sp)
         {
             return _dal.Insert(sp);

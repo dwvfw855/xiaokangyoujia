@@ -10,6 +10,11 @@ namespace Mk.Chain.Core.Repository.SqlServer
 {
     public class Shop_DetailRepository : BaseRepository<shop_detail>, IShop_DetailRepository
     {
+
+        public Shop_DetailRepository() : base(1)
+        {
+
+        }
         public  List<shop_detail> Query()
         {
             
@@ -39,7 +44,11 @@ namespace Mk.Chain.Core.Repository.SqlServer
             return sp;
         }
 
+        public shop_detail GetShop_Detail(string guid)
+        {
+         return   Db.Queryable<shop_detail>().Where(m => m.MainGUID == guid).First();
 
 
+        }
     }
 }

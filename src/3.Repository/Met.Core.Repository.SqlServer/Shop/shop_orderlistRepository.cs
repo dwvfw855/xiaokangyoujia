@@ -10,6 +10,12 @@ namespace Mk.Chain.Core.Repository.SqlServer
 {
     public class shop_orderlistRepository : BaseRepository<shop_orderlist>, Ishop_orderlistRepository
     {
+
+
+        public shop_orderlistRepository():base(1)
+        {
+
+        }
         public int insert(shop_orderlist sp)
         {
             return Db.Insertable<shop_orderlist>(sp).ExecuteCommand();

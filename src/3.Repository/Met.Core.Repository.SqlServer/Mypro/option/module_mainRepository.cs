@@ -10,6 +10,12 @@ namespace Mk.Chain.Core.Repository.SqlServer
 {
     public class module_mainRepository : BaseRepository<module_main>, Imodule_mainRepository
     {
+
+        public module_mainRepository():base(1)
+        {
+
+        }
+
         public async Task<List<module_main>> Query()
         {
             List<module_main> List = null;

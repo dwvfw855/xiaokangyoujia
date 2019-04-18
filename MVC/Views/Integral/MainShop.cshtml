@@ -170,7 +170,7 @@
 
                     @foreach (var item in ViewBag.OrderList as List<Mk.Chain.Core.Models.shop_orderlist>)
                     {
-                        <a href="Details_zoom.html">
+                        <a href="@Url.Action("ShopDetail","Integral",new {guid=item.GUID })">
                             <li class="border_right fl">
                                 <img src="~/@item.OrderImgUrl" />
                                 <span>@item.ShopName</span> <br />
@@ -178,13 +178,13 @@
                             </li>
                         </a>
                     }
-              <a href="Details_zoom.html">
+              @*<a href="Details_zoom.html">
             <li class="border_right fl">
                 <img src="~/images/jifen/sp.png" />
                 <span>迷你智能电饭煲HYFG-1016</span>
                 <span class="int_color">86.0积分</span>
             </li>
-        </a>
+        </a>*@
         @*<a href="Details_zoom.html">
             <li class="">
                 <img src="~/images/jifen/sp.png" />

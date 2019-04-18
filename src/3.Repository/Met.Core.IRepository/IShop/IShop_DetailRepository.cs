@@ -12,5 +12,9 @@ namespace Mk.Chain.Core.IRepository.Base
 
         int Insert(shop_detail sp);
 
+
+        shop_detail GetShop_Detail(string guid);
+
+
     }
 }

@@ -10,6 +10,11 @@ namespace Mk.Chain.Core.Repository.SqlServer
 {
     public class module_homechildrenRepository : BaseRepository<module_homechildren>, Imodule_homechildrenRepository
     {
+
+        public module_homechildrenRepository():base(1)
+        {
+
+        }
         public  List<module_homechildren> Query()
         {
             

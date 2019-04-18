@@ -40,13 +40,13 @@ namespace Mk.Chain.Core.Repository.SqlServer
             get { return entityDB; }
             private set { entityDB = value; }
         }
-        public BaseRepository()
+        public BaseRepository(int ndb)
         {
             DbContext.Init(BaseDBConfig.ConnectionString);
             context = DbContext.GetDbContext();
             db = context.Db;
             entityDB = context.GetEntityDB<TEntity>(db);
-            _redishelper = new RedisHelper(1);
+            _redishelper = new RedisHelper(ndb);
         }
 
         public TEntity QueryByID(object objId)
