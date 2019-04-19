@@ -7,7 +7,7 @@ using System.Collections.Concurrent;
 public static class RedisConnectionHelp
 {
     //系统自定义Key前缀
-    public static readonly string SysCustomKey = "Mkchain";
+    public static readonly string SysCustomKey = "shop";
 
     //"127.0.0.1:6379,allowadmin=true
     private static readonly string RedisConnectionString = "";

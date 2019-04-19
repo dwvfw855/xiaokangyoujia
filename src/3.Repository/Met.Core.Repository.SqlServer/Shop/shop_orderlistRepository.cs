@@ -23,10 +23,11 @@ namespace Mk.Chain.Core.Repository.SqlServer
 
         public  List<shop_orderlist> Query(int pageindex, int pageSize, string type)
         {    
-           
+           //缓存
 
 
-                return  Db.Queryable<shop_orderlist>().OrderBy(m=>m.CeateTime).Skip(pageSize*(pageindex-1)).Take(pageSize).ToList();
+
+          return  Db.Queryable<shop_orderlist>().OrderBy(m=>m.CeateTime).Skip(pageSize*(pageindex-1)).Take(pageSize).ToList();
            
         }
 

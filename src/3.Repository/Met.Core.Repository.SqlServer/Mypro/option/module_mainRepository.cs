@@ -19,16 +19,17 @@ namespace Mk.Chain.Core.Repository.SqlServer
         public async Task<List<module_main>> Query()
         {
             List<module_main> List = null;
-            if (Redis.StringGet("ccc") == null)
+            if (Redis.HashGet<List<module_main>>("module", "module_main") == null)
             {
                 List = await Db.Queryable<module_main>().ToListAsync();
-                Redis.StringSet("ccc", Newtonsoft.Json.JsonConvert.SerializeObject(List));
+                Redis.HashSet("module", "module_main", List);
+                //"module_main", Newtonsoft.Json.JsonConvert.SerializeObject(List),new TimeSpan(1,0,0)
             }
             else
             {
                 // string vaulse=     ;
-                List = Newtonsoft.Json.JsonConvert.DeserializeObject<List<module_main>>(Redis.StringGet("ccc"));
 
+                List= Redis.HashGet<List<module_main>>("module", "module_main");
 
 
             }

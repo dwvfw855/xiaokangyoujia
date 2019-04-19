@@ -17,8 +17,26 @@ namespace Mk.Chain.Core.Repository.SqlServer
         }
         public  List<module_homechildren> Query()
         {
-            
-                return  Db.Queryable<module_homechildren>().ToList();
+            List<module_homechildren> List = null;
+            if (Redis.HashGet<List<module_homechildren>>("module", "module_homechildren") == null)
+            {
+                List =  Db.Queryable<module_homechildren>().ToList();
+                Redis.HashSet("module", "module_homechildren", List);
+               
+            }
+            else
+            {
+                // string vaulse=     ;
+                List = Redis.HashGet<List<module_homechildren>>("module", "module_homechildren");
+
+
+
+            }
+
+
+            return List;
+
+          //  return  Db.Queryable<module_homechildren>().ToList();
            
         }
     }

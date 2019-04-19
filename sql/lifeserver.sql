@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : local
-Source Server Version : 50717
+Source Server Version : 50635
 Source Host           : localhost:3306
 Source Database       : lifeserver
 
 Target Server Type    : MYSQL
-Target Server Version : 50717
+Target Server Version : 50635
 File Encoding         : 65001
 
-Date: 2019-04-18 09:05:47
+Date: 2019-04-19 18:15:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -88,13 +88,16 @@ CREATE TABLE `shop_detail` (
   `detailContent` text,
   `detailSpecifications` longtext,
   `MainGUID` varchar(255) DEFAULT NULL,
+  `detailName` varchar(255) DEFAULT NULL,
+  `detailConut` bigint(20) DEFAULT NULL,
+  `detailMoney` decimal(10,0) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of shop_detail
 -- ----------------------------
-INSERT INTO `shop_detail` VALUES ('2', '1', '<div class=\"name_box \" style=\"display: none;\">\r\n						<img src=\"images/xqq/sp_2.png\">\r\n						<img src=\"images/xqq/sp_1.png\">\r\n					</div>', '<div class=\"name_box detail_width_con\" style=\"display: block;\">\r\n						<span class=\"detail_main\">品牌及名称：海尔变频空调海尔变频空调</span>\r\n						<span class=\"detail_main\">型号：AB-DCN03</span>\r\n						<span class=\"detail_main\">规格：280x308x292</span>\r\n						<span class=\"detail_main\">材质：钢化模型</span>\r\n						<span class=\"detail_main\">产地：上海</span>\r\n						<span class=\"detail_main\">配送时间：我们会在您下单后的2-3个工作日内日发货</span>\r\n					</div>', null);
+INSERT INTO `shop_detail` VALUES ('2', '1', '<div class=\"name_box \" style=\"display: none;\">\r\n						<img src=\"images/xqq/sp_2.png\">\r\n						<img src=\"images/xqq/sp_1.png\">\r\n					</div>', '<div class=\"name_box detail_width_con\" style=\"display: block;\">\r\n						<span class=\"detail_main\">品牌及名称：海尔变频空调海尔变频空调</span>\r\n						<span class=\"detail_main\">型号：AB-DCN03</span>\r\n						<span class=\"detail_main\">规格：280x308x292</span>\r\n						<span class=\"detail_main\">材质：钢化模型</span>\r\n						<span class=\"detail_main\">产地：上海</span>\r\n						<span class=\"detail_main\">配送时间：我们会在您下单后的2-3个工作日内日发货</span>\r\n					</div>', 'e44d0d28eb3e4057a43ac050ed6fb064', null, null, null);
 
 -- ----------------------------
 -- Table structure for shop_orderlist
@@ -116,10 +119,6 @@ CREATE TABLE `shop_orderlist` (
 -- ----------------------------
 -- Records of shop_orderlist
 -- ----------------------------
-INSERT INTO `shop_orderlist` VALUES ('1', '迷你智能电饭煲', '100', '100', null, '3', 'images/jifen/sp.png', null, null);
-INSERT INTO `shop_orderlist` VALUES ('2', '迷你智能电饭煲', '100', '100', '', '3', 'images/jifen/sp.png', null, null);
-INSERT INTO `shop_orderlist` VALUES ('3', '迷你智能电饭煲', '100', '100', null, '3', 'images/jifen/sp.png', null, null);
-INSERT INTO `shop_orderlist` VALUES ('4', null, '100', null, null, '3', 'images/jifen/sp.png', '2019/4/16 10:28:16', '00000000000000000000000000000000');
 INSERT INTO `shop_orderlist` VALUES ('5', '测试商品', '100', null, null, '3', 'images/jifen/sp.png', '2019/4/16 10:30:19', '00000000000000000000000000000000');
 INSERT INTO `shop_orderlist` VALUES ('6', '测试商品', '100', null, null, '3', 'images/jifen/sp.png', '2019/4/16 10:31:23', 'e44d0d28eb3e4057a43ac050ed6fb064');
 

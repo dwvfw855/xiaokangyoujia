@@ -44,11 +44,33 @@ namespace Mk.Chain.Core.Models
            /// </summary>           
            public string detailSpecifications {get;set;}
 
+           /// <summary>
+           /// Desc:
+           /// Default:
+           /// Nullable:True
+           /// </summary>           
+           public string MainGUID {get;set;}
 
+           /// <summary>
+           /// Desc:
+           /// Default:
+           /// Nullable:True
+           /// </summary>           
+           public string detailName {get;set;}
 
+           /// <summary>
+           /// Desc:
+           /// Default:
+           /// Nullable:True
+           /// </summary>           
+           public int? detailConut {get;set;}
 
-
-        public string MainGUID { get; set; }
+           /// <summary>
+           /// Desc:
+           /// Default:
+           /// Nullable:True
+           /// </summary>           
+           public decimal? detailMoney {get;set;}
 
     }
 }
