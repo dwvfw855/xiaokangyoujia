@@ -18,21 +18,36 @@ namespace Mk.Chain.Core.Repository.SqlServer
         public  List<module_homechildren> Query()
         {
             List<module_homechildren> List = null;
-            if (Redis.HashGet<List<module_homechildren>>("module", "module_homechildren") == null)
+            #region hash存储
+            //if (Redis.HashGet<List<module_homechildren>>("module", "module_homechildren") == null)
+            //{
+            //    List = Db.Queryable<module_homechildren>().ToList();
+            //    Redis.HashSet("module", "module_homechildren", List);
+
+            //}
+            //else
+            //{
+            //    // string vaulse=     ;
+            //    List = Redis.HashGet<List<module_homechildren>>("module", "module_homechildren");
+
+
+
+            //}
+            #endregion
+            if (Redis.StringGet("module_homechildren") == null)
             {
-                List =  Db.Queryable<module_homechildren>().ToList();
-                Redis.HashSet("module", "module_homechildren", List);
-               
+                List = Db.Queryable<module_homechildren>().ToList();
+                Redis.StringSet( "module_homechildren", List);
+
             }
             else
             {
                 // string vaulse=     ;
-                List = Redis.HashGet<List<module_homechildren>>("module", "module_homechildren");
-
+            
+                List = Newtonsoft.Json.JsonConvert.DeserializeObject<List<module_homechildren>>(Redis.StringGet("module_homechildren"));
 
 
             }
-
 
             return List;
 

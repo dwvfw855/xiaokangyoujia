@@ -19,21 +19,38 @@ namespace Mk.Chain.Core.Repository.SqlServer
         public async Task<List<module_main>> Query()
         {
             List<module_main> List = null;
-            if (Redis.HashGet<List<module_main>>("module", "module_main") == null)
+            #region hash存储
+            //if (Redis.HashGet<List<module_main>>("module", "module_main") == null)
+            //{
+            //    List = await Db.Queryable<module_main>().ToListAsync();
+            //    Redis.HashSet("module", "module_main", List);
+            //    //"module_main", Newtonsoft.Json.JsonConvert.SerializeObject(List),new TimeSpan(1,0,0)
+            //}
+            //else
+            //{
+            //    // string vaulse=     ;
+
+            //    List = Redis.HashGet<List<module_main>>("module", "module_main");
+
+
+            //} 
+            #endregion
+            #region string 存储
+            if (Redis.StringGet("module_main") == null)
             {
                 List = await Db.Queryable<module_main>().ToListAsync();
-                Redis.HashSet("module", "module_main", List);
+                Redis.StringSet("module_main", List, new TimeSpan(1, 0, 0));
                 //"module_main", Newtonsoft.Json.JsonConvert.SerializeObject(List),new TimeSpan(1,0,0)
             }
             else
             {
                 // string vaulse=     ;
 
-                List= Redis.HashGet<List<module_main>>("module", "module_main");
+                List = Newtonsoft.Json.JsonConvert.DeserializeObject <List< module_main >>( Redis.StringGet("module_main"));
 
 
             }
-
+            #endregion
             return List;
 
           //  return await Db.Queryable<module_main>().ToListAsync();

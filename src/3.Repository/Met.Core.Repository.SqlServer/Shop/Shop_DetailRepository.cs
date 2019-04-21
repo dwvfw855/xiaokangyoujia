@@ -48,21 +48,35 @@ namespace Mk.Chain.Core.Repository.SqlServer
         {
 
            shop_detail sp = null;
-            if (Redis.HashGet<shop_detail>("shop", guid) == null)
+            #region hash
+            //if (Redis.HashGet<shop_detail>("shop", guid) == null)
+            //{
+            //    sp = Db.Queryable<shop_detail>().Where(m => m.MainGUID == guid).First();
+            //    Redis.HashSet("shop", guid, sp);
+            //    //"module_main", Newtonsoft.Json.JsonConvert.SerializeObject(List),new TimeSpan(1,0,0)
+            //}
+            //else
+            //{
+            //    // string vaulse=     ;
+
+            //    sp = Redis.HashGet<shop_detail>("shop", guid);
+
+
+            //} 
+            #endregion
+            if (Redis.StringGet("shopdetail") == null)
             {
                 sp = Db.Queryable<shop_detail>().Where(m => m.MainGUID == guid).First();
-                Redis.HashSet("shop", guid, sp);
+                Redis.StringSet("shopdetail", sp);
                 //"module_main", Newtonsoft.Json.JsonConvert.SerializeObject(List),new TimeSpan(1,0,0)
             }
             else
             {
                 // string vaulse=     ;
 
-                sp = Redis.HashGet<shop_detail>("shop", guid);
-
+                sp= Newtonsoft.Json.JsonConvert.DeserializeObject<shop_detail>(Redis.StringGet("shopdetail"));
 
             }
-
 
 
 

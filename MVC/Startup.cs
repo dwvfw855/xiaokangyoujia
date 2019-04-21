@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MVC.Temple;
 
 namespace MVC
 {
@@ -38,6 +39,7 @@ namespace MVC
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
+            services.AddScoped<test>();
             #region AutoFac
             //实例化 AutoFac  容器   
             var builder = new ContainerBuilder();
