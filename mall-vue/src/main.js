@@ -6,10 +6,12 @@ import App from './App'
 import routes from './routers.js'
 import store from './vuex/index.js'
 import * as types from './vuex/mutation-types'
+import api from '../src/http/api'
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
-
+Vue.config.productionTip = false
+Vue.prototype.$api = api;
 const router = new VueRouter({
   routes
 })

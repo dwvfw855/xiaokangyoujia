@@ -54,7 +54,7 @@
 </template>
 <script>
 require('./index.less')
-import {shop,shopBanner,shopCat,floor1,recommendGoods} from '../../data/data.js'
+//import {shop,shopBanner,shopCat,floor1,recommendGoods} from '../../data/data.js'
 
 import SharePopup from '../../components/sharePopup.vue'
 import CatBox from '../../components/catBox.vue'
@@ -65,7 +65,7 @@ import ScrollerBox from '../../components/ScrollerBox.vue'
 import GoodGrid from '../../components/GoodGrid.vue'
 import {Swiper, SwiperItem, Popup, ViewBox} from 'vux'
 
-const {mapGetters} = require('../../../node_modules/vuex/dist/vuex.min.js')
+//const {mapGetters} = require('../../../node_modules/vuex/dist/vuex.min.js')
 
 export default {
 	components: {
@@ -91,20 +91,35 @@ export default {
 		}
 	},
 	created(){
-		this.initShop()
+		//this.initShop()
+
+		this.getdata();
 	},
 	computed: {
 		// ...mapGetters({
 		// 	shop
 		// })
-		shop(){
-			return this.$store.getters.shop
-		}
+		// shop(){
+		// 	return this.$store.getters.shop
+		// }
 	},
 	methods: {
-		initShop() {
-			this.$store.dispatch('initShop')
+		getdata(){
+                this.$api({
+      method: 'get',
+      url: '/values'
+    }).then((response) => {
+     // this.datas = response.data;
+        Console.log( response.data);
+
+
+    })
+
+
 		}
+		// initShop() {
+		// 	this.$store.dispatch('initShop')
+		// }
 	}
 }
 </script>

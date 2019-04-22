@@ -29,7 +29,29 @@ namespace Mk.Chain.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+
+            services.AddCors(options =>
+
+            {
+
+                options.AddPolicy("any", t =>
+
+                {
+
+                    t.AllowAnyOrigin() //允许任何来源的主机访问
+
+                    .AllowAnyMethod()
+
+                    .AllowAnyHeader()
+
+                    .AllowCredentials();//指定处理cookie
+
+                });
+
+            });
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
             #region AutoFac
             //实例化 AutoFac  容器   
