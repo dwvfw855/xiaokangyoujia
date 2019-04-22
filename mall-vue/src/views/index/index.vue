@@ -83,17 +83,17 @@ export default {
 	},
 	data() {
 		return {
-			// shop: shop,
-			shopBanner: shopBanner,
-			shopCat: shopCat,
-			floor1: floor1,
-			recommendGoods: recommendGoods
+			 shop: {},
+			 shopBanner: [],
+			 shopCat: [],
+			 floor1: [],
+			 recommendGoods: []
 		}
 	},
 	created(){
-		//this.initShop()
 
 		this.getdata();
+		//this.initShop()
 	},
 	computed: {
 		// ...mapGetters({
@@ -104,13 +104,20 @@ export default {
 		// }
 	},
 	methods: {
-		getdata(){
-                this.$api({
+		getdata()
+		{
+			let _this=this;
+              _this.$api({
       method: 'get',
       url: '/values'
     }).then((response) => {
-     // this.datas = response.data;
-        Console.log( response.data);
+	 
+	 _this.shop=response.data.shop;
+	 _this.shopBanner=response.data.shopBanner;
+	 _this.shopCat=response.data.shopCat;
+	 _this.floor1=response.data.floor1;
+		console.log( response.data);
+		_this.recommendGoods=response.data.recommendGoods;
 
 
     })

@@ -9,7 +9,7 @@ import * as types from './vuex/mutation-types'
 import api from '../src/http/api'
 
 Vue.use(VueRouter)
-Vue.use(Vuex)
+//Vue.use(Vuex)
 Vue.config.productionTip = false
 Vue.prototype.$api = api;
 const router = new VueRouter({
