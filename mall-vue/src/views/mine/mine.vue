@@ -110,11 +110,11 @@
 					name: 'myAddress'
 				}">
 			</cell>
-			<cell 
+			<!-- <cell 
 				class="z-cell-item"
 				:title="'我要开馆'" 
 				is-link>
-			</cell>
+			</cell> -->
 		</group>
 	</div>
 </template>
