@@ -3,7 +3,8 @@ import axios from 'axios'
 // import router from '../router'
 
 const api = axios.create();
-api.defaults.baseURL = 'http://localhost:5000/api';
+//api.defaults.baseURL = 'http://localhost:8078/api';
+api.defaults.baseURL = 'http://203.195.214.163:8078/api';
 api.defaults.timeout = 5000;
 api.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 api.defaults.headers.post['X-Requested-With'] = 'XMLHttpRequest'

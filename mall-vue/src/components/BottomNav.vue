@@ -32,11 +32,11 @@ export default {
 					iconCls: 'zui-icon-INDEX_1',
 					link: 'index'
 				},
-				{
-					name: '文章',
-					iconCls: 'zui-icon-TEA',
-					link: 'articles'
-				},
+				// {
+				// 	name: '文章',
+				// 	iconCls: 'zui-icon-TEA',
+				// 	link: 'articles'
+				// },
 				{
 					name: '购物车',
 					iconCls: 'zui-icon-SHOPPING-CART-EMPTY',
